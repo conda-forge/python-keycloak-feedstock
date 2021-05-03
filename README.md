@@ -116,4 +116,5 @@ Feedstock Maintainers
 =====================
 
 * [@edennuriel](https://github.com/edennuriel/)
+* [@fcollonval](https://github.com/fcollonval/)
 

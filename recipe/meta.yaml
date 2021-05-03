@@ -10,7 +10,7 @@ source:
   sha256: fd4d210a96d7431ef0574b4cb9858856c514b31f8f4644a5d4c7ea870c5a6e3e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -40,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - edennuriel
+    - fcollonval
