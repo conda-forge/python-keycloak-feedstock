@@ -17,17 +17,21 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.6,<4
   run:
-    - python >=3.6
+    - python >=3.6,<4
     - python-jose >=1.4.0
     - requests >=2.20.0
 
 test:
+  requires:
+    - pip
   imports:
     - keycloak
     - keycloak.authorization
     - keycloak.tests
+  commands:
+    - pip check
 
 about:
   home: https://github.com/marcospereirampj/python-keycloak
