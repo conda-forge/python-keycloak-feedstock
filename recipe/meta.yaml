@@ -2,17 +2,17 @@
 {% set version = "0.22.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8f2ea277c94cee1de108fd6a018d52d23a603dea6bfb7cdd8eeeb09963bbdade
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,12 +30,13 @@ test:
     - keycloak.tests
 
 about:
-  home: "https://github.com/marcospereirampj/python-keycloak"
+  home: https://github.com/marcospereirampj/python-keycloak
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "python-keycloak is a Python package providing access to the Keycloak API."
+  summary: python-keycloak is a Python package providing access to the Keycloak API.
 
 extra:
   recipe-maintainers:
     - edennuriel
+    - fcollonval
