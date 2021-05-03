@@ -1,5 +1,5 @@
 {% set name = "python-keycloak" %}
-{% set version = "0.21.0" %}
+{% set version = "0.22.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fd4d210a96d7431ef0574b4cb9858856c514b31f8f4644a5d4c7ea870c5a6e3e
+  sha256: 8f2ea277c94cee1de108fd6a018d52d23a603dea6bfb7cdd8eeeb09963bbdade
 
 build:
   number: 1
@@ -33,8 +33,7 @@ about:
   home: https://github.com/marcospereirampj/python-keycloak
   license: MIT
   license_family: MIT
-  # PR upstream to package license https://github.com/marcospereirampj/python-keycloak/pull/68
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: python-keycloak is a Python package providing access to the Keycloak API.
 
 extra:
