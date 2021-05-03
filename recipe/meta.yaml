@@ -30,8 +30,8 @@ test:
     - keycloak
     - keycloak.authorization
     - keycloak.tests
-  commands:
-    - pip check
+  # commands:
+  #  - pip check
 
 about:
   home: https://github.com/marcospereirampj/python-keycloak
