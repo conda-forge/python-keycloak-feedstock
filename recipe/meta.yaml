@@ -1,5 +1,5 @@
 {% set name = "python-keycloak" %}
-{% set version = "0.26.1" %}
+{% set version = "0.27.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3cd6792e18887f653c3bf055727a81059600b8ce02e975492d6b42f63ca45064
+  sha256: f3caddf2108f62cea6122243e33cb7e27bafbd7b8016be347de120ecf898b919
 
 build:
   number: 0
