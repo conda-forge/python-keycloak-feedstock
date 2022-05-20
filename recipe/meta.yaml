@@ -29,7 +29,6 @@ test:
   imports:
     - keycloak
     - keycloak.authorization
-    - keycloak.tests
   # commands:
   #  - pip check
 
