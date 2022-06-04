@@ -22,6 +22,7 @@ requirements:
     - python >=3.6,<4
     - python-jose >=1.4.0
     - requests >=2.20.0
+    - urllib3 >=1.26.0
 
 test:
   requires:
