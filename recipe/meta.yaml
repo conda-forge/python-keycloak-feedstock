@@ -1,5 +1,5 @@
 {% set name = "python-keycloak" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 868a9115e39795d369c62286117f723fd5d7e412096f002d1d26cab8bdc3e417
+  sha256: f0a81ad1ac4b274142703d133242612d79deae60e85993d7460922f55e0cb447
 
 build:
   number: 0
@@ -17,10 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<4
+    - python >=3.7,<4
+    - poetry-core >=1.0.0
   run:
-    - python >=3.6,<4
-    - python-jose >=1.4.0
+    - python >=3.7,<4
+    - python-jose >=3.3.0
     - requests >=2.20.0
     - urllib3 >=1.26.0
 
