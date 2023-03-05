@@ -1,11 +1,11 @@
-About python-keycloak
-=====================
+About python-keycloak-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-keycloak-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/marcospereirampj/python-keycloak
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-keycloak-feedstock/blob/main/LICENSE.txt)
 
 Summary: python-keycloak is a Python package providing access to the Keycloak API.
 
