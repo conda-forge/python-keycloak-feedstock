@@ -10,7 +10,7 @@ source:
   sha256: cc868126f535aa4f320dc9eab24e46af381c13bcc88d9b0701b04293ea75cd24
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -33,8 +33,8 @@ test:
   imports:
     - keycloak
     - keycloak.authorization
-  # commands:
-  #  - pip check
+  commands:
+   - pip check
 
 about:
   home: https://github.com/marcospereirampj/python-keycloak
