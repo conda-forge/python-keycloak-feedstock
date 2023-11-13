@@ -1,5 +1,5 @@
 {% set name = "python-keycloak" %}
-{% set version = "3.3.0" %}
+{% set version = "3.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: cc868126f535aa4f320dc9eab24e46af381c13bcc88d9b0701b04293ea75cd24
+  sha256: f2be89e4f37bbe022433fcde67d1c97cc49733f829b6ffa0491582b76bf379a4
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -34,7 +34,7 @@ test:
     - keycloak
     - keycloak.authorization
   commands:
-   - pip check
+    - pip check
 
 about:
   home: https://github.com/marcospereirampj/python-keycloak

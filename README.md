@@ -145,4 +145,5 @@ Feedstock Maintainers
 
 * [@edennuriel](https://github.com/edennuriel/)
 * [@fcollonval](https://github.com/fcollonval/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 
