@@ -6,35 +6,34 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python_keycloak-{{ version }}.tar.gz
   sha256: 29eee9490ba354af81fcdf86ec81d840515d8b53002de831715e05d07298886a
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
-    - pip
-    - python >=3.7,<4
+    - python >=3.8,<4.0
     - poetry-core >=1.0.0
+    - pip
   run:
-    - deprecation >=2.1.0,<3.0.0
-    - python >=3.7,<4
-    - python-jose >=3.3.0,<4.0.0
-    - requests >=2.28.2,<3.0.0
-    - requests-toolbelt >=1.0.0
-    - urllib3 >=1.26.14,<2.0.0
+    - python >=3.8,<4.0
+    - requests >=2.20.0
+    - python-jose >=3.3.0
+    - requests-toolbelt >=0.6.0
+    - deprecation >=2.1.0
 
 test:
-  requires:
-    - pip
   imports:
     - keycloak
     - keycloak.authorization
   commands:
     - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/marcospereirampj/python-keycloak
