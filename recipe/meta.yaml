@@ -1,5 +1,5 @@
 {% set name = "python-keycloak" %}
-{% set version = "3.9.0" %}
+{% set version = "3.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python_keycloak-{{ version }}.tar.gz
-  sha256: 4c2cd580ded92326b74a376fe453519b3a6db019803032cae26a4b9099e1afd0
+  sha256: 50c8073172ca0630f3569c6b631134216b60f4e347cc5bb669a57e6ffba50f7e
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
+    - jwcrypto >=1.5.4,<2.0.0
     - python >=3.8,<4.0
     - requests >=2.20.0
     - python-jose >=3.3.0
