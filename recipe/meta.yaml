@@ -1,5 +1,5 @@
 {% set name = "python-keycloak" %}
-{% set version = "4.0.1" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python_keycloak-{{ version }}.tar.gz
-  sha256: 042185baae4910bd78de4bbbec87519a351b3024d19502f124bfda3090e1ec9a
+  sha256: 236501109afc828868157bf1560ddf7d19f81176feab53da4ac1c3d001f4453e
 
 build:
   noarch: python
@@ -20,7 +20,9 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
-    - jwcrypto >=1.5.4,<2.0.0
+    - async-property >=0.2.2
+    - httpx >=0.23.2
+    - jwcrypto >=1.5.4
     - python >=3.8,<4.0
     - requests >=2.20.0
     - requests-toolbelt >=0.6.0
