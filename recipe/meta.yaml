@@ -1,5 +1,5 @@
 {% set name = "python-keycloak" %}
-{% set version = "4.2.2" %}
+{% set version = "4.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python_keycloak-{{ version }}.tar.gz
-  sha256: 1d43a1accd4a038ed39317fcb3eb78211df6c75bbcbc4c482c99ee76327136f2
+  sha256: 8177682931a91b18ddcc725a91fb7574d9cf25a3b7c5d0aa5b8b56ddace28842
 
 build:
   noarch: python
