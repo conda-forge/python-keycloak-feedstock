@@ -1,5 +1,5 @@
 {% set name = "python-keycloak" %}
-{% set version = "5.0.0" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/python_keycloak-{{ version }}.tar.gz
-  sha256: 14230c41f27405cec6065d78b3265e9da8a32b31f004a50364cdf62e70067ca8
+  sha256: 004a87ddf19cb2cc98c3e68e060965fdd38adb95df91b62f0a11d72951941ff7
 
 build:
   noarch: python
@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
     - async-property >=0.2.2
     - httpx >=0.23.2
     - jwcrypto >=1.5.4
-    - python >=3.8,<4.0
+    - python >={{ python_min }}
     - requests >=2.20.0
     - requests-toolbelt >=0.6.0
     - deprecation >=2.1.0
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/marcospereirampj/python-keycloak
