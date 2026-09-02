@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: python-keycloak
-  version: "7.1.1"
+  version: 7.1.1
 
 package:
   name: ${{ name|lower }}
@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - poetry-core >=1.0.0
     - pip
   run:
